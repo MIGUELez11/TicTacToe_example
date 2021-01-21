@@ -1,0 +1,153 @@
+:root {
+	--hover-color: #ff000070;
+}
+
+/* Errors */
+
+.error {
+	background-color: #ff000070;
+	padding: 10px;
+	border-radius: 5px;
+	box-sizing: border-box;
+}
+
+/* Start Screen */
+
+.startScreen {
+	position: relative;
+	left: 50%;
+	transform: translate(-50%);
+	margin-top: 50px;
+	display: inline-flex;
+	flex-direction: column;
+}
+
+.startScreen button {
+	margin-top: 20px;
+	height: 2.5em;
+	cursor: pointer;
+}
+
+.startScreen .namesContainer div {
+	display: flex;
+	margin: 5px;
+	flex-direction: column;
+}
+
+.startScreen .namesContainer div input {
+	height: 1.5em;
+}
+
+
+/* Game */
+
+.game {
+	margin-top: 50px;
+	display: inline-block;
+	position: relative;
+	left: 50%;
+	transform: translate(-50%);
+}
+
+.playerTurn {
+	font-size: 2em;
+	text-align: center;
+}
+
+
+/* Board */
+
+.board {
+	display: inline-flex;
+	flex-direction: column;
+}
+
+.board .row {
+	display: inline-block;
+	height: 100px;
+	box-sizing: border-box;
+}
+
+.board .row .col {
+	display: inline-block;
+	background: white;
+	width: 100px;
+	height: 100px;
+	border: 2px solid black;
+	border-bottom: 0px;
+	border-right: 0px;
+
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.board .row .col:hover:not(.player0):not(.player1) {
+	background-color: var(--hover-color);
+	cursor: pointer;
+}
+
+.board .row:last-of-type .col {
+	border-bottom: 2px solid black;
+}
+
+.board .row .col:last-of-type {
+	border-right: 2px solid black;
+}
+
+.board .row .col.player0 {
+	background-image: url("/assets/img/cross.svg");
+}
+
+.board .row .col.player1 {
+	background-image: url("/assets/img/circle.svg");
+}
+
+/* HighScore */
+
+.highScoreBack {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	left: 0;
+	top: 0;
+	background-color: #0007;
+}
+
+.highScore {
+	background-color: #fff;
+	padding: 20px;
+	border-radius: 10px;
+	display: inline-block;
+	position: relative;
+	left: 50%;
+	top: 25%;
+	transform: translate(-50%, -25%);
+	width: 300px;
+}
+
+.highScore .msg {
+	text-align: center;
+	font-size: 2em;
+	font-weight: bold;
+}
+
+.highScoreContainer {
+	margin: 0 auto;
+	display: flex;
+	flex-direction: column;
+	width: 150px;
+}
+
+.highScoreContainer div {
+	margin: 5px;
+	display: flex;
+	justify-content: space-between;
+}
+
+.highScoreContainer div.player {
+	background-color: gold;
+}
+
+.highScoreContainer div p {
+	margin: 0;
+}
