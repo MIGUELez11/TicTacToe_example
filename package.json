@@ -1,0 +1,24 @@
+{
+  "name": "TicTacToe_example",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+	"cypress:open": "cypress open",
+	"cypress:run": "cypress run"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MIGUELez11/TicTacToe_example.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MIGUELez11/TicTacToe_example/issues"
+  },
+  "homepage": "https://github.com/MIGUELez11/TicTacToe_example#readme",
+  "devDependencies": {
+    "cypress": "^6.3.0"
+  }
+}
